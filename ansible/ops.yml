@@ -1,0 +1,11 @@
+---
+  - name: "Writing a play to reset admin pwd for OpsCenter"
+    hosts: opscenter 
+    user: <user_name>
+    become: true
+    become_user: root
+    gather_facts: no
+    
+    tasks:
+      - name: "Install opscenter to change admin password"
+        script: <path to script to install and change the pwd for opscenter/opscenter.sh>
